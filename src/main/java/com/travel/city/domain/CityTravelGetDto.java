@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 
 @Data
 public class CityTravelGetDto {
-    private String memberId;
     private int cityId;
     private LocalDate startDate;
     private LocalDate endDate;

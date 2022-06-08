@@ -5,7 +5,12 @@
 <mapper namespace="com.travel.city.mapper.CityMapper">
     <select id="getCityList" resultType="CityTravelGetDto" parameterType="String">
         SELECT
-            *
+            t.city_id as cityId
+        ,   t.start_date as startDate
+        ,   t.end_date as endDate
+        ,   c.name as name
+        ,   c.address as address
+        ,   c.comment as comment
         FROM travel AS t
         INNER JOIN city AS c ON t.city_id = c.id
         WHERE t.member_id = #{memberId}
